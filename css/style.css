@@ -1,0 +1,159 @@
+/* Ensure images are responsive and don't exceed container width */
+img {
+	max-width: 100%;  /* Images will be scaled to fit their container */
+}
+
+/* Main banner section: full width and height of the viewport */
+.main-banner {
+	width: 100%;  /* Set the banner to be full-width */
+	height: 100vh;  /* Set the height to cover the full viewport */
+	background: url("../img/welcome.jpg") center;  /* Set background image */
+	background-size: 100%;  /* Set background image size to cover entire element */
+}
+
+/* Main blog card section width */
+.main-blog-card {
+    width: 100%; 
+    max-width: 900px;
+    margin: 0 auto; 
+    border-radius: 0.75rem; 
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); 
+    overflow: hidden;
+    transition: 0.3s ease all;
+	cursor: pointer;
+}
+
+.main-blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.main-blog-card img {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    object-fit: cover;
+}
+
+/* Category aside section: full width */
+.category-aside {
+    width: 100%;
+    max-width: none; 
+    margin-left: auto; 
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.row.g-4 {
+    align-items: flex-start; /* 2 phần thẳng hàng đầu tiên */
+}
+
+
+aside.col-md-4 {
+    display: flex;
+	flex-direction: column;
+    justify-content: flex-start;
+}
+
+.category-aside {
+    position: sticky;
+    top: 80px;
+    /* margin-top: 25px; */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+main.col-md-8 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Main blog section: 70% width */
+.main-blog {
+	width: 70%;  /* Set width to 70% of its container */
+}
+
+/* Aside section: 30% width */
+.aside-main {
+	width: 30%;  /* Set width to 30% of its container */
+}
+
+/* Set specific width for an element */
+.w-450 {
+	width: 450px;  /* Set the width to 450px */
+}
+
+/* Full height of the viewport */
+.vh-100 {
+	min-height: 100vh;  /* Set minimum height to full viewport height */
+}
+
+/* Admin section styling */
+.section-1 {
+	width: 100%;  /* Full width for this section */
+	padding: 15px;  /* Add padding around the section */
+}
+
+/* Table for displaying data, with max width and 90% width */
+.main-table {
+   width: 90%;  /* Set table width to 90% */
+   max-width: 700px;  /* Limit maximum width to 700px */
+}
+
+/* Styling for buttons inside react-btns class */
+.react-btns i {
+	font-size: 24px;  /* Set font size for icons */
+	color: #222;  /* Set icon color */
+	cursor: pointer;  /* Change cursor to pointer when hovering */
+}
+
+/* Links inside react-btns */
+.react-btns a {
+	text-decoration: none;  /* Remove underline from links */
+	color: #222;  /* Set link color */
+	cursor: pointer;  /* Change cursor to pointer when hovering */
+}
+
+/* Hover effect for links inside react-btns */
+.react-btns a:hover {
+	opacity: .8;  /* Reduce opacity on hover */
+}
+
+/* Hover effect for like button in react-btns */
+.react-btns .like:hover {
+	color: #0088FF;  /* Change color when hovering over like button */
+}
+
+/* Styling for liked button (active state) */
+.react-btns .liked {
+	color: #0088FF;  /* Set color for liked button */
+}
+
+/* Comment section styling */
+.comments .comment span {
+   color: #0088FF;  /* Set comment span text color */
+}
+
+/* Responsive design for smaller screens (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  /* On mobile screens, hide aside-main section */
+  .aside-main {
+  	display: none;  /* Hide aside section on mobile */
+  }
+
+  /* Set main blog section to 100% width */
+  .main-blog {
+	width: 100%;  /* Set main blog to full width */
+  }
+
+  /* Set blog card to 100% width */
+  .main-blog-card {
+	width: 100%;  /* Set blog card to full width */
+  }
+}

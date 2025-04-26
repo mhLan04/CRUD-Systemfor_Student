@@ -1,0 +1,141 @@
+/* Reset some default browser styles */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: arial, sans-serif;
+}
+
+/* Main link style in profile section */
+.main-profile-link a {
+	text-decoration: none;  /* Remove underline from the link */
+	color: #eee;  /* Set link color */
+}
+
+/* Hover effect for icons in profile section */
+.main-profile-link i:hover {
+	color: #127b8e;  /* Change icon color on hover */
+}
+
+/* Hover effect for links in profile section */
+.main-profile-link a:hover {
+	color: #127b8e;  /* Change link color on hover */
+}
+
+/* Header style */
+.header {
+	display: flex;  /* Use flexbox to align items */
+	justify-content: space-between;  /* Space out items */
+	align-items: center;  /* Vertically center items */
+	padding: 15px 30px;  /* Add padding */
+	background: #23242b;  /* Set background color */
+	color: #fff;  /* Set text color */
+}
+
+/* User name styling */
+.u-name {
+	font-size: 20px;  /* Set font size */
+}
+
+.u-name b {
+	color: #127b8e;  /* Set bold text color */
+}
+
+/* Icon style in the header */
+.header i {
+	font-size: 30px;  /* Set icon size */
+	cursor: pointer;  /* Change cursor to pointer on hover */
+	color: #fff;  /* Set icon color */
+}
+
+/* User profile heading */
+.user-p h4 {
+	color: #ccc;  /* Set color for the profile heading */
+	font-size: 1.2em;  /* Set font size */
+	padding-left: 20px;  /* Add padding to the left */
+}
+
+/* Sidebar styling */
+.side-bar {
+	width: 250px;  /* Set sidebar width */
+	background: #262931;  /* Set sidebar background color */
+	min-height: 100vh;  /* Set sidebar to cover full height */
+	transition: 500ms width;  /* Add smooth transition effect for width */
+}
+
+/* Body layout: flexbox used for main content */
+.body {
+	display: flex;  /* Use flexbox for the main layout */
+}
+
+/* Sidebar list styling */
+.side-bar ul {
+	margin-top: 20px;  /* Add top margin to the list */
+	list-style: none;  /* Remove list style */
+	padding-left: 0;  /* Remove left padding */
+}
+
+/* Sidebar list item styling */
+.side-bar ul li {
+	font-size: 16px;  /* Set font size */
+	padding: 15px 0px;  /* Add padding to top and bottom */
+	padding-left: 20px;  /* Add left padding */
+	transition: 500ms background;  /* Smooth transition for background on hover */
+	white-space: nowrap;  /* Prevent text wrapping */
+	overflow: hidden;  /* Hide overflow text */
+	text-overflow: ellipsis;  /* Show ellipsis for overflow text */
+}
+
+/* Hover effect for sidebar list items */
+.side-bar ul li:hover {
+	background: #127b8e;  /* Change background color on hover */
+}
+
+/* Active item in the sidebar */
+.side-bar ul .active {
+	background: #127b8e;  /* Set active item background color */
+}
+
+/* Sidebar link styling */
+.side-bar ul li a {
+	text-decoration: none;  /* Remove underline */
+	color: #eee;  /* Set link color */
+	cursor: pointer;  /* Change cursor to pointer */
+	letter-spacing: 1px;  /* Add letter spacing */
+}
+
+/* Sidebar icon styling */
+.side-bar ul li a i {
+	display: inline-block;  /* Display icon inline */
+	padding-right: 10px;  /* Add padding to the right of the icon */
+	font-size: 23px;  /* Set icon size */
+}
+
+/* Sidebar toggle button styling */
+#navbtn {
+	display: inline-block;  /* Display the button inline */
+	margin-left: 70px;  /* Add left margin */
+	font-size: 20px;  /* Set font size */
+	transition: 500ms color;  /* Smooth transition for color change */
+}
+
+/* Hidden checkbox used for toggling sidebar width */
+#checkbox {
+	display: none;  /* Hide the checkbox */
+}
+
+/* When the checkbox is checked, reduce sidebar width */
+#checkbox:checked ~ .body .side-bar {
+	width: 60px;  /* Set sidebar width to 60px when checked */
+	display: block;
+}
+
+/* Hide user profile content when the checkbox is checked */
+#checkbox:checked ~ .body .side-bar .user-p {
+	visibility: hidden;  /* Hide profile section */
+}
+
+/* Hide the sidebar text when the checkbox is checked */
+#checkbox:checked ~ .body .side-bar a span {
+	display: none;  /* Hide text next to icons */
+}
