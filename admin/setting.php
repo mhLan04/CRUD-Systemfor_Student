@@ -23,7 +23,7 @@ if (isset($_SESSION['admin_id']) && isset($_SESSION['username'])) {
         <link rel="stylesheet" href="../css/style.css">
     </head>
 
-    <body>
+    <body> 
 
         <?php $key = "hhdsfs1263z";
         include "inc/side-nav.php"; ?>

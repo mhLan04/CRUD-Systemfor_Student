@@ -3,7 +3,12 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: arial, sans-serif;
+	font-family: 'Poppins', sans-serif;
+}
+
+.body {
+	display: flex;  /* Use flexbox for the main layout */
+	background: #f5f6f7;
 }
 
 /* Main link style in profile section */
@@ -61,11 +66,6 @@
 	background: #262931;  /* Set sidebar background color */
 	min-height: 100vh;  /* Set sidebar to cover full height */
 	transition: 500ms width;  /* Add smooth transition effect for width */
-}
-
-/* Body layout: flexbox used for main content */
-.body {
-	display: flex;  /* Use flexbox for the main layout */
 }
 
 /* Sidebar list styling */
@@ -146,23 +146,19 @@
     transition: all 0.3s ease; /* Làm mượt hiệu ứng hover */
 }
 
-.navbar .nav-link {
-	background: none !important;
-	color: #000 !important;
-	border: none;
-	transition: all 0.3s ease-in-out;
-	font-weight: bold;
-	text-transform: uppercase;
-	padding: 10px 20px;
-  }
-  
-  /* Khi hover hoặc active */
-  .navbar .nav-link:hover, 
-  .navbar .nav-link.active {
-	background-color: #f7b731 !important; /* Nền vàng */
-	color: #fff !important; /* Chữ trắng */
-	border-radius: 4px;
-	text-decoration: none !important; /* Bỏ gạch chân khi hover */
-  }
+/* Hiệu ứng hover */
+.navbar-nav .nav-link:hover {
+    color: #0088FF; /* Màu xanh khi hover, bạn có thể thay màu khác */
+    text-decoration: underline; /* Gạch chân khi hover */
+}
 
-  
+.navbar-brand {
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #0056b3; /* Màu khác khi hover vào tên MyBlog */
+    text-decoration: none; /* Hoặc underline nếu bạn muốn */
+}
