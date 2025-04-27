@@ -1,159 +1,373 @@
-/* Ensure images are responsive and don't exceed container width */
+/* ----------------------------------
+   Global styles and image settings
+-----------------------------------*/
+
+/* img: Make all images responsive */
 img {
-	max-width: 100%;  /* Images will be scaled to fit their container */
+  max-width: 100%;
 }
 
-/* Main banner section: full width and height of the viewport */
+/* ----------------------------------
+   Main banner styles
+-----------------------------------*/
+
+/* .banner-wrapper: Container for the entire banner section */
+.banner-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* .main-banner: The main banner area that holds the swiper and text */
 .main-banner {
-	width: 100%;  /* Set the banner to be full-width */
-	height: 100vh;  /* Set the height to cover the full viewport */
-	background: url("../img/welcome.jpg") center;  /* Set background image */
-	background-size: 100%;  /* Set background image size to cover entire element */
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  z-index: 1;
 }
 
-/* Main blog card section width */
+/* .content-layer: Overlay that holds the text content */
+.content-layer {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: white;
+  z-index: 5;
+}
+
+/* .title: Banner main heading (animated by JS) */
+.title {
+  font-size: 60px;
+  margin-bottom: 20px;
+  opacity: 0;
+}
+
+/* .subtitle: Banner sub-heading (animated by JS) */
+.subtitle {
+  font-size: 24px;
+  margin-bottom: 30px;
+  opacity: 0;
+}
+
+/* .button-group a: Common style for banner buttons */
+.button-group a {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 0 10px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  opacity: 0;
+}
+
+/* .btn-main: Yellow main button */
+.btn-main {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* .btn-outline: White outline secondary button */
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+/* ----------------------------------
+   Banner text animations (JS-driven)
+-----------------------------------*/
+
+/* .char: Each letter animated separately */
+.char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Keyframes: character flying in */
+@keyframes charFlyIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* .fade-in: Fade in effect for text blocks */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.7s ease;
+}
+
+/* .fade-out: Fade out effect for text blocks */
+.fade-out {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+
+/* .block-fade-in: Fade up block animation */
+.block-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: blockFadeIn 0.8s forwards ease-out;
+}
+
+/* .block-fade-in-delay: Same as block-fade-in but delayed 0.3s */
+.block-fade-in-delay {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: blockFadeIn 0.8s forwards ease-out;
+  animation-delay: 0.3s;
+}
+
+/* .block-slide-in-left: Main button slide in from left (delay 1s) */
+.block-slide-in-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  animation: slideInLeft 1s forwards ease-out;
+  animation-delay: 1s;
+}
+
+/* .block-slide-in-right: Secondary button slide in from right (delay 1s) */
+.block-slide-in-right {
+  opacity: 0;
+  transform: translateX(60px);
+  animation: slideInRight 1s forwards ease-out;
+  animation-delay: 1s;
+}
+
+/* Keyframes for block animations */
+@keyframes blockFadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-60px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translateX(60px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* .slide-in: Simple fade-slide for block entry */
+.slide-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Background zoom effect for active slides */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 3s ease;
+}
+
+.swiper-slide-active img {
+  transform: scale(1.05);
+}
+
+.swiper-fade .swiper-slide {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ----------------------------------
+   Swiper slider navigation styles
+-----------------------------------*/
+
+/* Show navigation buttons on hover */
+.main-banner:hover .swiper-button-next,
+.main-banner:hover .swiper-button-prev {
+  opacity: 1;
+}
+
+/* Base style for navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+}
+
+/* ----------------------------------
+   Service boxes section
+-----------------------------------*/
+
+/* .service-boxes: Container for services under banner */
+.service-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: -100px;
+  z-index: 20;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* .service: Individual service card */
+.service {
+  background: #fff;
+  padding: 90px 30px 40px 30px;
+  width: 270px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+/* Color themes for services */
+.service.yellow { background: #f1b600; color: #fff; }
+.service.red { background: #ec1c24; color: #fff; }
+.service.darkblue { background: #003b71; color: #fff; }
+.service.lightblue { background: #32b6e0; color: #fff; }
+
+/* .icon-circle: Circle container for service icon */
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-circle img {
+  width: 40px;
+  height: 40px;
+}
+
+/* .divider: Line under service title */
+.divider {
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 10px auto;
+}
+
+/* Service title and description */
+.service h3 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.service p {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* ----------------------------------
+   Blog cards section
+-----------------------------------*/
+
+/* .main-blog-card: Main blog item card */
 .main-blog-card {
-    width: 100%; 
-    max-width: 900px;
-    margin: 0 auto; 
-    border-radius: 0.75rem; 
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); 
-    overflow: hidden;
-    transition: 0.3s ease all;
-	cursor: pointer;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: 0.3s ease all;
+  cursor: pointer;
 }
 
 .main-blog-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .main-blog-card img {
-    border-top-left-radius: 0.75rem;
-    border-top-right-radius: 0.75rem;
-    object-fit: cover;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  object-fit: cover;
 }
 
-/* Category aside section: full width */
+/* ----------------------------------
+   Aside section and responsive layouts
+-----------------------------------*/
+
+/* .category-aside: Sticky aside for categories */
 .category-aside {
-    width: 100%;
-    max-width: none; 
-    margin-left: auto; 
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
+  width: 100%;
+  max-width: none;
+  margin-left: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
-.row.g-4 {
-    align-items: flex-start; /* 2 phần thẳng hàng đầu tiên */
-}
-
-
+/* Flex layouts */
+.row.g-4 { align-items: flex-start; }
 aside.col-md-4 {
-    display: flex;
-	flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+main.col-md-8 { display: flex; flex-direction: column; }
 
-.category-aside {
-    position: sticky;
-    top: 80px;
-    /* margin-top: 25px; */
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-}
+.main-blog { width: 70%; }
+.aside-main { width: 30%; }
 
-main.col-md-8 {
-    display: flex;
-    flex-direction: column;
-}
+/* Fixed sizes */
+.w-450 { width: 450px; }
+.vh-100 { min-height: 100vh; }
+.section-1 { width: 100%; padding: 15px; }
+.main-table { width: 90%; max-width: 700px; }
 
-
-
-/* Main blog section: 70% width */
-.main-blog {
-	width: 70%;  /* Set width to 70% of its container */
-}
-
-/* Aside section: 30% width */
-.aside-main {
-	width: 30%;  /* Set width to 30% of its container */
-}
-
-/* Set specific width for an element */
-.w-450 {
-	width: 450px;  /* Set the width to 450px */
-}
-
-/* Full height of the viewport */
-.vh-100 {
-	min-height: 100vh;  /* Set minimum height to full viewport height */
-}
-
-/* Admin section styling */
-.section-1 {
-	width: 100%;  /* Full width for this section */
-	padding: 15px;  /* Add padding around the section */
-}
-
-/* Table for displaying data, with max width and 90% width */
-.main-table {
-   width: 90%;  /* Set table width to 90% */
-   max-width: 700px;  /* Limit maximum width to 700px */
-}
-
-/* Styling for buttons inside react-btns class */
-.react-btns i {
-	font-size: 24px;  /* Set font size for icons */
-	color: #222;  /* Set icon color */
-	cursor: pointer;  /* Change cursor to pointer when hovering */
-}
-
-/* Links inside react-btns */
-.react-btns a {
-	text-decoration: none;  /* Remove underline from links */
-	color: #222;  /* Set link color */
-	cursor: pointer;  /* Change cursor to pointer when hovering */
-}
-
-/* Hover effect for links inside react-btns */
-.react-btns a:hover {
-	opacity: .8;  /* Reduce opacity on hover */
-}
-
-/* Hover effect for like button in react-btns */
-.react-btns .like:hover {
-	color: #0088FF;  /* Change color when hovering over like button */
-}
-
-/* Styling for liked button (active state) */
-.react-btns .liked {
-	color: #0088FF;  /* Set color for liked button */
-}
-
-/* Comment section styling */
-.comments .comment span {
-   color: #0088FF;  /* Set comment span text color */
-}
-
-/* Responsive design for smaller screens (max-width: 768px) */
+/* Responsive on mobile */
 @media only screen and (max-width: 768px) {
-  /* On mobile screens, hide aside-main section */
-  .aside-main {
-  	display: none;  /* Hide aside section on mobile */
-  }
+  .aside-main { display: none; }
+  .main-blog { width: 100%; }
+  .main-blog-card { width: 100%; }
+}
 
-  /* Set main blog section to 100% width */
-  .main-blog {
-	width: 100%;  /* Set main blog to full width */
-  }
+/* ----------------------------------
+   React buttons and comment styles
+-----------------------------------*/
 
-  /* Set blog card to 100% width */
-  .main-blog-card {
-	width: 100%;  /* Set blog card to full width */
-  }
+/* .react-btns: Like and share section */
+.react-btns i, .react-btns a {
+  font-size: 24px;
+  color: #222;
+  cursor: pointer;
+}
+
+.react-btns a:hover {
+  opacity: 0.8;
+}
+
+.react-btns .like:hover,
+.react-btns .liked {
+  color: #0088ff;
+}
+
+/* .comments: Style for comment spans */
+.comments .comment span {
+  color: #0088ff;
 }
