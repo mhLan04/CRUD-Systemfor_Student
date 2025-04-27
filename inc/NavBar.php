@@ -1,6 +1,6 @@
 <!-- Navbar with dynamic Login/Profile -->
 <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
-  <div class="container-fluid">
+  <div class="container-fluid px-5">
     <!-- Logo bên trái -->
     <a class="navbar-brand fw-bold text-uppercase" href="index.php">
       MY <span class="text-primary">BLOG</span>

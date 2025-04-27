@@ -57,7 +57,7 @@ $categories = get5Categories($conn);
     <section class="hero-section">
         <div class="text-center">
             <h1>BLOG</h1>
-            <p class="lead">Meet Our Dedicated Educators</p>
+            <p class="lead">DISCOVER COURSES THAT INSPIRE YOU</p>
         </div>
     </section>
 

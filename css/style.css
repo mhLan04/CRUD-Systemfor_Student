@@ -599,3 +599,22 @@ main.col-md-8 {
   font-size: 0.9rem;
   color: #555;
 }
+
+/* Style mặc định cho dropdown item */
+.dropdown-menu .dropdown-item {
+  font-weight: normal; /* chữ bình thường */
+  text-transform: uppercase;
+  color: #6c757d; /* chữ xám nhạt */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover hiệu ứng màu cam #f7b731 + chữ trắng */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f7b731; /* nền cam đẹp */
+  color: #ffffff; /* chữ trắng */
+}
+
+/* Đường kẻ phân cách */
+.dropdown-divider {
+  border-color: #dee2e6;
+}

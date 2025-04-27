@@ -9,7 +9,7 @@
                     data-btn1="Explore Now"
                     data-btn2="Contact Support"
                     data-btn1-link="#"
-                    data-btn2-link="#">
+                    data-btn2-link="contact.php">
                     <img src="img/slider2.jpg" alt="Slide 1">
                 </div>
 

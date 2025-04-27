@@ -37,6 +37,12 @@ if (isset($_GET['post_id'])) {
 		<?php
 		include 'inc/NavBar.php';
 		?>
+		<section class="hero-section">
+			<div class="text-center">
+				<h1>BLOG</h1>
+				<p class="lead">Meet Our Dedicated Educators</p>
+			</div>
+		</section>
 
 		<div class="container mt-5">
 			<section class="d-flex">

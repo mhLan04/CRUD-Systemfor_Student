@@ -18,8 +18,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="text-center">
-            <h1>Our Classes</h1>
-            <p class="lead">Discover Courses That Inspire You</p>
+            <h1>CLASSES</h1>
+            <p class="lead">DISCOVER COURSES THAT INSPIRE YOU</p>
         </div>
     </section>
 

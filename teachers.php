@@ -18,8 +18,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="text-center">
-            <h1>Our Teachers</h1>
-            <p class="lead">Meet Our Dedicated Educators</p>
+            <h1>TEACHERS</h1>
+            <p class="lead">MEET OUR DEDICATED EDUCATORS</p>
         </div>
     </section>
 
