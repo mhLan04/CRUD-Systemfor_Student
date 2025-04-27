@@ -63,16 +63,23 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 			const btn1 = document.getElementById('banner-btn1');
 			const btn2 = document.getElementById('banner-btn2');
 
+			// Reset tất cả hiệu ứng ngay lập tức
 			title.classList.remove('slide-in', 'fade-in', 'block-fade-in');
 			subtitle.classList.remove('slide-in', 'fade-in', 'block-fade-in');
-			btn1.classList.remove('slide-in', 'fade-in', 'block-fade-in');
-			btn2.classList.remove('slide-in', 'fade-in', 'block-fade-in');
+			btn1.classList.remove('slide-in', 'fade-in', 'block-slide-in-left', 'block-slide-in-right');
+			btn2.classList.remove('slide-in', 'fade-in', 'block-slide-in-left', 'block-slide-in-right');
 
+			// Ẩn ngay nội dung
 			title.classList.add('fade-out');
 			subtitle.classList.add('fade-out');
-			btn1.classList.add('fade-out');
-			btn2.classList.add('fade-out');
+
+			// Quan trọng: btn1 và btn2 ẩn ngay, không chờ
+			btn1.style.opacity = '0';
+			btn1.style.transform = 'translateX(-60px)';
+			btn2.style.opacity = '0';
+			btn2.style.transform = 'translateX(60px)';
 		}
+
 
 		// Update nội dung mới
 		function updateBannerContent() {
