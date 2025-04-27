@@ -256,6 +256,7 @@ img {
   z-index: 20;
   position: relative;
   flex-wrap: wrap;
+  color: white;
 }
 
 /* .service: Individual service card */
