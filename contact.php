@@ -10,9 +10,18 @@ session_start();
     <title>Contact Administrator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <?php include 'inc/NavBar.php'; ?>
+
+    <section class="hero-section">
+        <div class="text-center">
+            <h1>Our Classes</h1>
+            <p class="lead">Discover Courses That Inspire You</p>
+        </div>
+    </section>
 
     <div class="container mt-5">
         <h2 class="mb-4">Contact the Administrator</h2>
