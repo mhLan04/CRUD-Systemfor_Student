@@ -12,13 +12,6 @@
 <body>
 	<?php include 'inc/NavBar.php'; ?>
 
-	<!-- Hero Section -->
-	<section class="hero-section">
-		<div class="text-center">
-			<h1>ADMIN LOGIN</h1>
-			<p class="lead">DISCOVER COURSES THAT INSPIRE YOU</p>
-		</div>
-	</section>
 	<div class="d-flex justify-content-center align-items-center vh-100">
 
 		<form class="shadow w-450 p-3"
