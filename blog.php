@@ -53,9 +53,16 @@ $categories = get5Categories($conn);
 <body>
 
 	<?php include 'inc/NavBar.php'; ?>
+	<!-- Hero Section -->
+    <section class="hero-section">
+        <div class="text-center">
+            <h1>BLOG</h1>
+            <p class="lead">Meet Our Dedicated Educators</p>
+        </div>
+    </section>
 
 	<div class="container mt-5">
-		<div class="row g-4"> <!-- Dùng row để chia layout 2 phần -->
+		<div class="row g-4 align-items-stretch"> <!-- Dùng row để chia layout 2 phần -->
 			<?php if ($posts != 0) { ?>
 				<main class="col-md-8">
 					<h1 class="mb-4 fs-3">

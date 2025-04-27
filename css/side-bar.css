@@ -139,3 +139,30 @@
 #checkbox:checked ~ .body .side-bar a span {
 	display: none;  /* Hide text next to icons */
 }
+
+.navbar-nav .nav-link {
+    font-weight: 700; /* Hoặc 600 tùy ý, càng cao càng đậm */
+    text-transform: uppercase;
+    transition: all 0.3s ease; /* Làm mượt hiệu ứng hover */
+}
+
+.navbar .nav-link {
+	background: none !important;
+	color: #000 !important;
+	border: none;
+	transition: all 0.3s ease-in-out;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px 20px;
+  }
+  
+  /* Khi hover hoặc active */
+  .navbar .nav-link:hover, 
+  .navbar .nav-link.active {
+	background-color: #f7b731 !important; /* Nền vàng */
+	color: #fff !important; /* Chữ trắng */
+	border-radius: 4px;
+	text-decoration: none !important; /* Bỏ gạch chân khi hover */
+  }
+
+  

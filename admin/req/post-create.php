@@ -49,7 +49,7 @@ if (isset($_SESSION['admin_id']) && isset($_SESSION['username'])) {
 
                     if (in_array($image_ex, $allowed_exs)) {
                         $new_image_name = uniqid("COVER-", true) . '.' . $image_ex;
-                        $image_path = '../../upload/blog' . $new_image_name;
+                        $image_path = '../../upload/blog/' . $new_image_name;
 
                         move_uploaded_file($image_temp, $image_path);
 

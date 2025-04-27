@@ -16,6 +16,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/side-bar.css"> -->
 </head>
 
 <body>
@@ -23,6 +24,10 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 	<?php include 'inc/NavBar.php'; ?>
 
 	<?php include 'inc/Banner.php'; ?>
+
+	<?php include 'inc/Home-featured-posts.php'; ?>
+
+	<?php include 'footer.php'; ?>
 
 	<!-- Các phần khác của index.php như service-boxes, scripts... giữ nguyên -->
 

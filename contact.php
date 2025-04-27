@@ -37,7 +37,7 @@ session_start();
         </form>
 
         <div class="mt-3">
-            <a href="req/blog.php" class="btn btn-secondary">Back to Blog</a>
+            <a href="blog.php" class="btn btn-secondary">Back to Blog</a>
         </div>
     </div>
 

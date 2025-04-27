@@ -25,7 +25,7 @@ $categories = getAll($conn);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/jquery.richtext.min.js"></script>
 </head>
-<body>
+<body style="padding-top: 80px;">
 <div class="container">
     <h3 class="mb-4">Create New Post</h3>
     <?php if (isset($_GET['error'])): ?>

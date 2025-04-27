@@ -52,16 +52,16 @@
 </div>
 
 <div class="service-boxes">
-    <div class="service yellow">
+    <div class="service gold">
         <div class="icon-circle">
             <img src="img/teacher.png" alt="Teacher">
         </div>
-        <h3>Expert teachers</h3>
+        <h3>Expert Teachers</h3>
         <div class="divider"></div>
         <p>Lorem ipsum dolor sit amet, adipiscing elit. Vivamus nibh dolor gravida at eleifend</p>
     </div>
 
-    <div class="service red">
+    <div class="service darkred">
         <div class="icon-circle">
             <img src="img/book.png" alt="Book">
         </div>
@@ -70,7 +70,7 @@
         <p>Lorem ipsum dolor sit amet, adipiscing elit. Vivamus nibh dolor gravida at eleifend</p>
     </div>
 
-    <div class="service darkblue">
+    <div class="service navy">
         <div class="icon-circle">
             <img src="img/support.png" alt="Support">
         </div>
@@ -79,7 +79,7 @@
         <p>Lorem ipsum dolor sit amet, adipiscing elit. Vivamus nibh dolor gravida at eleifend</p>
     </div>
 
-    <div class="service lightblue">
+    <div class="service skyblue">
         <div class="icon-circle">
             <img src="img/scholarship.png" alt="Scholarship">
         </div>

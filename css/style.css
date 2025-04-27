@@ -1,6 +1,16 @@
 /* ----------------------------------
    Global styles and image settings
 -----------------------------------*/
+*{
+  padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+  background-color: #f5f6f8;
+}
+
 
 /* img: Make all images responsive */
 img {
@@ -89,8 +99,14 @@ img {
 
 /* Keyframes: character flying in */
 @keyframes charFlyIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* .fade-in: Fade in effect for text blocks */
@@ -140,18 +156,36 @@ img {
 
 /* Keyframes for block animations */
 @keyframes blockFadeIn {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideInLeft {
-  0% { opacity: 0; transform: translateX(-60px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideInRight {
-  0% { opacity: 0; transform: translateX(60px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* .slide-in: Simple fade-slide for block entry */
@@ -236,10 +270,22 @@ img {
 }
 
 /* Color themes for services */
-.service.yellow { background: #f1b600; color: #fff; }
-.service.red { background: #ec1c24; color: #fff; }
-.service.darkblue { background: #003b71; color: #fff; }
-.service.lightblue { background: #32b6e0; color: #fff; }
+.service.yellow {
+  background: #f1b600;
+  color: #fff;
+}
+.service.red {
+  background: #ec1c24;
+  color: #fff;
+}
+.service.darkblue {
+  background: #003b71;
+  color: #fff;
+}
+.service.lightblue {
+  background: #32b6e0;
+  color: #fff;
+}
 
 /* .icon-circle: Circle container for service icon */
 .icon-circle {
@@ -281,6 +327,25 @@ img {
   line-height: 1.6;
 }
 
+.service.gold {
+  background-color: #D4AF37;
+}
+
+.service.darkred {
+  background-color: #C0392B;
+}
+
+.service.navy {
+  background-color: #2C3E50;
+}
+
+.service.skyblue {
+  background-color: #3498DB;
+}
+
+/* Các style gốc như border-radius, box-shadow, padding... giữ nguyên nếu anh thích */
+
+
 /* ----------------------------------
    Blog cards section
 -----------------------------------*/
@@ -288,13 +353,14 @@ img {
 /* .main-blog-card: Main blog item card */
 .main-blog-card {
   width: 100%;
-  max-width: 900px;
+  height: 50vh;
   margin: 0 auto;
   border-radius: 0.75rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: 0.3s ease all;
   cursor: pointer;
+  position: relative;
 }
 
 .main-blog-card:hover {
@@ -306,6 +372,7 @@ img {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
   object-fit: cover;
+  height: 50%;
 }
 
 /* ----------------------------------
@@ -323,28 +390,53 @@ img {
 }
 
 /* Flex layouts */
-.row.g-4 { align-items: flex-start; }
+.row.g-4 {
+  align-items: flex-start;
+}
 aside.col-md-4 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-main.col-md-8 { display: flex; flex-direction: column; }
+main.col-md-8 {
+  display: flex;
+  flex-direction: column;
+}
 
-.main-blog { width: 70%; }
-.aside-main { width: 30%; }
+.main-blog {
+  width: 70%;
+}
+.aside-main {
+  width: 30%;
+}
 
 /* Fixed sizes */
-.w-450 { width: 450px; }
-.vh-100 { min-height: 100vh; }
-.section-1 { width: 100%; padding: 15px; }
-.main-table { width: 90%; max-width: 700px; }
+.w-450 {
+  width: 450px;
+}
+.vh-100 {
+  min-height: 100vh;
+}
+.section-1 {
+  width: 100%;
+  padding: 15px;
+}
+.main-table {
+  width: 90%;
+  max-width: 700px;
+}
 
 /* Responsive on mobile */
 @media only screen and (max-width: 768px) {
-  .aside-main { display: none; }
-  .main-blog { width: 100%; }
-  .main-blog-card { width: 100%; }
+  .aside-main {
+    display: none;
+  }
+  .main-blog {
+    width: 100%;
+  }
+  .main-blog-card {
+    width: 100%;
+  }
 }
 
 /* ----------------------------------
@@ -352,8 +444,8 @@ main.col-md-8 { display: flex; flex-direction: column; }
 -----------------------------------*/
 
 /* .react-btns: Like and share section */
-.react-btns i, .react-btns a {
-  font-size: 24px;
+.react-btns i,
+.react-btns a {
   color: #222;
   cursor: pointer;
 }
@@ -370,4 +462,139 @@ main.col-md-8 { display: flex; flex-direction: column; }
 /* .comments: Style for comment spans */
 .comments .comment span {
   color: #0088ff;
+}
+
+/* Style mặc định cho các nav-link */
+.navbar-nav .nav-link,
+.navbar .nav-link {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000 !important;
+  background-color: transparent !important;
+  border: none;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+/* Style khi hover/focus/active vào nav-link */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link:active {
+  background-color: #f7b731 !important; /* Nền vàng */
+  color: #ffffff !important; /* Chữ trắng */
+  border-radius: 4px;
+  text-decoration: none !important;
+}
+
+.hero-section {
+  background: url("../img/slider.jpg") no-repeat center center/cover;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.values-section .card {
+  transition: transform 0.3s;
+}
+
+.values-section .card:hover {
+  transform: translateY(-10px);
+}
+
+.team-section img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.cta-section {
+  background-color: rgb(243, 212, 144);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.class-card {
+  border-radius: 10px;
+  color: white;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.class-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.class-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.bg-yellow {
+  background-color: #f7b731;
+}
+
+.bg-red {
+  background-color: #eb3b5a;
+}
+
+.bg-blue {
+  background-color: #3867d6;
+}
+
+.bg-cyan {
+  background-color: #20bf6b;
+}
+
+.teacher-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.4s ease;
+  height: 100%;
+}
+.teacher-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+.teacher-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.teacher-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+.teacher-subject {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+.teacher-bio {
+  font-size: 0.9rem;
+  color: #555;
 }
