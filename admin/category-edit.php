@@ -45,19 +45,19 @@ if (isset($_SESSION['admin_id']) && isset($_SESSION['username']) && $_GET['id'])
         <!-- Display any error or success messages -->
 	 	<?php if (isset($_GET['error'])) { ?>	
 	 	<div class="alert alert-warning">
-			<?=htmlspecialchars($_GET['error'])?> <!-- Display the error message -->
+			<?=htmlspecialchars($_GET['error'])?>
 		</div>
 	    <?php } ?>
 
         <?php if (isset($_GET['success'])) { ?>	
 	 	<div class="alert alert-success">
-			<?=htmlspecialchars($_GET['success'])?> <!-- Display the success message -->
+			<?=htmlspecialchars($_GET['success'])?>
 		</div>
 	    <?php } ?>
         
         <!-- Form for editing category -->
         <form class="shadow p-3" 
-    	      action="req/Category-edit.php"  <!-- Form action to handle category update -->
+    	      action="req/Category-edit.php"
     	      method="post">
 
 		  <!-- Category input field -->
@@ -65,12 +65,12 @@ if (isset($_SESSION['admin_id']) && isset($_SESSION['username']) && $_GET['id'])
 		    <label class="form-label">Category</label>
 		    <input type="text" 
 		           class="form-control"
-		           name="category"  <!-- Input for category name -->
-		           value="<?=$category?>">  <!-- Pre-fill with current category name -->
+		           name="category" 
+		           value="<?=$category?>">
 		    <input type="text" 
 		           class="form-control"
 		           name="id"
-		           value="<?=$category_id?>"  <!-- Hidden input for category ID -->
+		           value="<?=$category_id?>" 
 		           hidden>
 		  </div>
 		  
